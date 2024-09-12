@@ -33,9 +33,6 @@ const FormPage = () => {
         if (response.ok) {
             setSuccessMessage(result.message);
             reset();  // Reseteamos el formulario
-            setHtmlMessage('');  // Limpiamos el editor HTML
-            localStorage.removeItem('htmlMessage');  // Removemos el mensaje del LocalStorage
-            localStorage.removeItem('password');  // Removemos la contraseña del LocalStorage
         } else {
             setErrorMessage(result.message || 'Error al enviar correos');
         }
