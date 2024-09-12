@@ -59,13 +59,10 @@ const FormPage = () => {
   return (
     <Container maxWidth="sm" style={{ marginTop: '20px' }}>
       <Typography variant="h4" gutterBottom>
-        Enviar Archivos y Mensaje
+        Rendición San Bartolo
       </Typography>
 
-      {/* Mensaje de éxito */}
       {successMessage && <Alert severity="success" style={{ marginBottom: '20px' }}>{successMessage}</Alert>}
-
-      {/* Mensaje de error */}
       {errorMessage && <Alert severity="error" style={{ marginBottom: '20px' }}>{errorMessage}</Alert>}
 
       <form onSubmit={handleSubmit(onSubmit)}>
