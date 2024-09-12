@@ -70,7 +70,6 @@ const FormPage = () => {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={3}>
-          {/* Campo para el archivo de Excel */}
           <Grid item xs={12}>
             <TextField
               fullWidth
@@ -82,18 +81,16 @@ const FormPage = () => {
             />
           </Grid>
 
-          {/* Editor HTML */}
           <Grid item xs={12}>
-            <Typography variant="h6">Mensaje HTML</Typography>
+            <Typography variant="h6">Mensaje Inicial</Typography>
             <ReactQuill
               theme="snow"
               value={htmlMessage}
               onChange={setHtmlMessage}
-              style={{ height: '300px', marginBottom: '30px' }}  // Ajustamos el tamaño del editor
+              style={{ height: '300px', marginBottom: '30px' }} 
             />
           </Grid>
 
-          {/* Campo para la contraseña */}
           <Grid item xs={12} style={{ marginBottom: '20px' }}>
             <TextField
               fullWidth
