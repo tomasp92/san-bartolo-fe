@@ -23,7 +23,7 @@ const FormPage = () => {
     formData.append('pass', data.password);
     
     try {
-        const response = await fetch('https://san-bartolo-ezs8vnjpz-tomasp92s-projects.vercel.app/api/send-emails', {
+        const response = await fetch('https://san-bartolo.vercel.app/api/send-emails', {
             method: 'POST',
             body: formData
         });
