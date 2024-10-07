@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 
 const FormPage = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const [htmlMessage, setHtmlMessage] = useState('Buen día a todos. Adjunto la rendición de este mes');
+const [htmlMessage, setHtmlMessage] = useState('Buen día a todos. Adjunto la rendición de este mes. Cualquier consulta me dicen. Saludos!! 🌷');
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
