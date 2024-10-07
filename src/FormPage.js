@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextField, Button, Container, Typography, Grid, Box, CircularProgress, Alert } from '@mui/material';
 import ReactQuill from 'react-quill';
@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 
 const FormPage = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const [htmlMessage, setHtmlMessage] = useState('');
+  const [htmlMessage, setHtmlMessage] = useState('Buen día a todos. Adjunto la rendición de este mes');
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -43,19 +43,7 @@ const FormPage = () => {
     }
 };
 
-// Cargar datos de LocalStorage cuando se monta el componente
-  useEffect(() => {
-    const storedHtmlMessage = localStorage.getItem('htmlMessage');
-    
-    if (storedHtmlMessage) {
-      setHtmlMessage(storedHtmlMessage);
-    }
-  }, []);
 
-  // Guardar mensaje y contraseña en LocalStorage cada vez que cambien
-  useEffect(() => {
-    localStorage.setItem('htmlMessage', htmlMessage);
-  }, [htmlMessage]);
   return (
     <Container maxWidth="sm" style={{ marginTop: '20px' }}>
       <Typography variant="h4" gutterBottom>
